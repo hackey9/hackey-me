@@ -1,18 +1,13 @@
-import App from "Components/Core/App";
-import FontsStyle from "Components/Styles/FontsStyle";
-import GlobalStyle from "Components/Styles/GlobalStyle";
+import App from "Components/Pages/App";
 import {AnimateSharedLayout} from "framer-motion";
 import React, {FC} from "react";
+import "./Fonts.scss";
+import "./Root.scss";
 
 
-const Root: FC = () => {
-
-    return (<>
-        <GlobalStyle/>
-        <FontsStyle/>
-        <AnimateSharedLayout>
-            <App/>
-        </AnimateSharedLayout>
-    </>);
-}
+const Root: FC = () => (
+    <AnimateSharedLayout>
+        <App/>
+    </AnimateSharedLayout>
+)
 export default Root;

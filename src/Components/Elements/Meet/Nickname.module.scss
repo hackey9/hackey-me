@@ -1,0 +1,22 @@
+.area {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+.text {
+  font-family: Orbitron, sans-serif;
+  font-size: 14px;
+  color: #808080;
+  padding-bottom: 12px;
+}
+
+.line {
+  width: 120px;
+  height: 1px;
+  background-color: #222;
+}
