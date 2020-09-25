@@ -3,23 +3,15 @@ import React, {FC, useEffect} from "react";
 import css from "./Avatar.module.scss";
 
 
-const Avatar: FC<{ loading?: boolean }> = ({loading}) => {
-
-    useEffect(() => {
-        console.log(loading)
-    });
-
-
-    return (
-        <Area>
-            <Image loading={loading}/>
-            <Svg>
-                <GrayCircle loading={loading}/>
-                <GreenCircle loading={loading}/>
-            </Svg>
-        </Area>
-    );
-}
+const Avatar: FC<{ loading?: boolean; }> = ({loading}) => (
+    <Area>
+        <Image loading={loading}/>
+        <Svg>
+            <GrayCircle loading={loading}/>
+            <GreenCircle loading={loading}/>
+        </Svg>
+    </Area>
+);
 export default Avatar;
 
 

@@ -1,6 +1,7 @@
 import Avatar from "Components/Elements/Meet/Avatar";
 import Name from "Components/Elements/Meet/Name";
 import Nickname from "Components/Elements/Meet/Nickname";
+import Pro from "Components/Elements/Meet/Pro";
 import Space from "Components/Elements/Space";
 import {HTMLMotionProps, motion} from "framer-motion";
 import React, {FC} from "react";
@@ -20,7 +21,7 @@ const Meet: FC<{ loading?: boolean }> = ({loading}) => {
                 <Nickname delay={2}/>
 
                 <Space height={64}/>
-                {/*<Pro/>*/}
+                <Pro delay={2.4}/>
             </>}
         </Layout>
     );
