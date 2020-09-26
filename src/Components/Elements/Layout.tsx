@@ -1,15 +1,11 @@
-import React, {FC, PropsWithChildren} from "react";
 import {motion} from "framer-motion";
+import React, {FC} from "react";
 
 
-type P = PropsWithChildren<{
-    hideBars?: boolean;
-}>;
-
-const Layout: FC<P> = ({children}: P) => {
+const Layout: FC<{ hideBars?: boolean }> = ({children}) => {
 
     return (
-        <motion.div layout>
+        <motion.div layout translate={"no"}>
             {children}
         </motion.div>
     );
