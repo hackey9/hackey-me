@@ -31,11 +31,7 @@ const Driver: FC<{ strings: string[], delay?: number }> = ({strings, delay}) => 
     useEffect(() => {
         const handle = setTimeout(enable, (delay ?? 0) * 1000);
         return () => clearTimeout(handle);
-    }, [delay])
-
-    useEffect(() => {
-        console.log(enabled);
-    }, [enabled])
+    }, [delay]);
 
     const handlePrintEnd = useCallback(() => {
 

@@ -29,4 +29,8 @@ const Meet: FC<{ loading?: boolean }> = ({loading}) => {
 export default Meet;
 
 
-const Layout: FC = () => <motion.div layout className={css.layout}/>
+const Layout: FC = ({children}) => (
+    <motion.div layout className={css.layout}>
+        {children}
+    </motion.div>
+);
