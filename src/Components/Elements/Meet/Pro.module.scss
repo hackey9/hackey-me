@@ -4,16 +4,21 @@
   font-family: Consolas, monospace;
   font-size: 20px;
 
+  .hidden {
+    visibility: hidden;
+  }
+
+  user-select: none;
+  cursor: text;
 }
 
 .text {
   display: inline-block;
   color: #757575;
+  white-space: pre;
 }
 
 .cursor {
   display: inline-block;
-
-  opacity: 1;
 }
 
