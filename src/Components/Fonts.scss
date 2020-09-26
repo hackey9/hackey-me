@@ -1,3 +1,5 @@
+// Montserrat
+
 @font-face {
   font-family: Montserrat;
   src: url(/static/fonts/Montserrat-Regular.ttf);
@@ -23,5 +25,21 @@
   font-family: Montserrat;
   src: url(/static/fonts/Montserrat-BoldItalic.ttf);
   font-style: italic;
+  font-weight: bold;
+}
+
+// Orbitron
+
+@font-face {
+  font-family: Orbitron;
+  src: url(/static/fonts/Orbitron-Regular.ttf);
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Orbitron;
+  src: url(/static/fonts/Orbitron-Bold.ttf);
+  font-style: normal;
   font-weight: bold;
 }
