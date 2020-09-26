@@ -80,12 +80,10 @@ const Printer: FC<{
         if (current.length === comparedPosition) {
 
             if (current.length === target.length) {
-                // trigger end
-
                 triggerPrintEnd();
             } else {
                 const time = (directionRef.current === PrintingDirection.Forward)
-                    ? random(80, 100)
+                    ? random(70, 100)
                     : 200;
 
                 directionRef.current = PrintingDirection.Forward;
@@ -167,9 +165,6 @@ const Cursor: FC<{ hidden?: boolean }> = ({hidden}) => {
         return () => controls.stop();
 
     }, [hidden, controls]);
-
-    // todo refactor this!
-    //return <div className={css.cursor}>|</div>
 
     return (
         <motion.div
