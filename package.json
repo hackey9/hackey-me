@@ -17,13 +17,15 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "^3.4.3",
-    "typescript": "^3.9.7"
+    "typescript": "^3.9.7",
+    "@vkontakte/vk-tunnel": "^0.0.15"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "start-server": "vk-tunnel --port=3000"
   },
   "eslintConfig": {
     "extends": "react-app"

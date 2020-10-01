@@ -1,5 +1,6 @@
 import {motion} from "framer-motion";
 import React, {FC, PropsWithChildren} from "react";
+import css from "./Skills.module.scss";
 
 
 type P = PropsWithChildren<{}>;
@@ -16,7 +17,7 @@ export default Skills;
 
 
 const Layout: FC = ({children}) => (
-    <motion.div>
+    <motion.div className={css.layout}>
         {children}
     </motion.div>
 )
