@@ -18,6 +18,8 @@
     "react-dom": "^16.13.1",
     "react-scripts": "^3.4.3",
     "typescript": "^3.9.7",
+    "use-resize-observer": "^6.1.0",
+    "@types/use-resize-observer": "^6.0.0",
     "@vkontakte/vk-tunnel": "^0.0.15"
   },
   "scripts": {

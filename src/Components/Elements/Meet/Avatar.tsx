@@ -1,11 +1,12 @@
 import {motion, useAnimation} from "framer-motion";
+import useAvatar from "Hooks/useAvatar";
 import React, {FC, useEffect} from "react";
 import css from "./Avatar.module.scss";
 
 
 const Avatar: FC<{ loading?: boolean; }> = ({loading}) => (
     <Area>
-        <Image loading={loading}/>
+        {!loading && <Image/>}
         <Svg>
             <GrayCircle loading={loading}/>
             <GreenCircle loading={loading}/>
@@ -24,38 +25,37 @@ const Area: FC = ({children}) => (
             duration: 1,
             ease: [.3, .0, .3, 1],
         }}
-        //style={{border: "1px solid white"}}
     >
         {children}
     </motion.div>
 );
 
 
-const Image: FC<{ loading?: boolean }> = ({loading}) => {
+const Image: FC = () => {
 
     const controls = useAnimation();
 
+    const src = useAvatar();
+
     useEffect(() => {
 
-        if (loading) {
-            controls.set({opacity: 0});
-        } else {
-            controls.start({
-                opacity: 1,
-                transition: {
-                    type: "tween",
-                    duration: 1.4,
-                    ease: "easeOut",
-                    delay: 1.8,
-                }
-            }).then();
-        }
-    }, [controls, loading]);
+        controls.set({opacity: 0});
+        controls.start({
+            opacity: 1,
+            transition: {
+                type: "tween",
+                duration: 1.4,
+                ease: "easeOut",
+                delay: 1.8,
+            }
+        }).then();
+    }, [controls]);
 
     return (
         <motion.div
             animate={controls}
             className={css.image}
+            style={{backgroundImage: `url(${encodeURI(src)})`}}
         />
     );
 }

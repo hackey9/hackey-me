@@ -1,23 +1,22 @@
-import {motion} from "framer-motion";
-import React, {FC, PropsWithChildren} from "react";
-import css from "./Skills.module.scss";
+import Container from "Components/Elements/Skills/Container";
+import Skill from "Components/Elements/Skills/Skill";
+import useSkills from "Hooks/useSkills";
+import React, {FC} from "react";
+//import css from "./Skills.module.scss";
 
 
-type P = PropsWithChildren<{}>;
+const Skills: FC = () => {
 
-const Skills: FC<P> = ({children}: P) => {
+    const skills = useSkills();
 
     return (
-        <Layout>
-            {children}
-        </Layout>
+        <Container>
+            {skills.map(({id: name, border, background, image}) => (
+                <Skill key={name} name={name} border={border} bg={background} image={image}/>
+            ))}
+        </Container>
     );
 }
 export default Skills;
 
 
-const Layout: FC = ({children}) => (
-    <motion.div className={css.layout}>
-        {children}
-    </motion.div>
-)
