@@ -1,26 +1,22 @@
 import Layout from "Components/Elements/Layout";
 import Meet from "Components/Pages/Meet/Meet";
-import Skills from "Components/Pages/Skills/Skills";
-import React, {FC, useEffect, useState} from "react";
+import LoadingController from "Components/Special/LoadingController";
+import React, {FC, useReducer} from "react";
 
 
 const App: FC = () => {
 
-    const [loading, setLoading] = useState(true);
-
-    useEffect(() => {
-
-        setTimeout(() => setLoading(false), 2000);
-
-    }, []);
+    const [loaded, setLoaded] = useReducer((_: boolean) => true, false);
 
     return (
-        <Layout hideBars={!loading}>
-            <Meet loading={loading}/>
-            {!loading && <>
-                <Skills/>
-            </>}
-        </Layout>
+        <LoadingController onLoaded={setLoaded}>
+            <Layout hideBars={loaded}>
+                <Meet loading={!loaded}/>
+                {loaded && <>
+                    {/*<Skills/>*/}
+                </>}
+            </Layout>
+        </LoadingController>
     );
 }
 export default App;
