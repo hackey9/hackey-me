@@ -1,0 +1,20 @@
+[
+  {
+    "id": "php",
+    "border": "#3B468E",
+    "background": "#8892BF",
+    "image": "/static/images/skills/php.svg"
+  },
+  {
+    "id": "node",
+    "border": "#4E7B54",
+    "background": "#99C8A1",
+    "image": "/static/images/skills/node.svg"
+  },
+  {
+    "id": "mongo",
+    "border": "#1A7B27",
+    "background": "#60D98D",
+    "image": "/static/images/skills/mongo.svg"
+  }
+]

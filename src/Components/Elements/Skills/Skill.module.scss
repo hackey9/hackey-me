@@ -1,0 +1,32 @@
+.outline {
+  width: 72px;
+  height: 72px;
+  border-radius: 100px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg {
+  width: 66px;
+  height: 66px;
+  border-radius: 100px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.image {
+  display: block;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-origin: content-box;
+}

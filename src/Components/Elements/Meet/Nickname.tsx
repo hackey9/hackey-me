@@ -15,7 +15,7 @@ const Nickname: FC<{ delay?: number }> = ({delay}) => {
 export default Nickname;
 
 
-const Area: FC<{ delay?: number }> = ({children, delay}) => {
+const Area: FC<{delay?: number}> = ({children, delay}) => {
 
     const variants: Variants = {
         target: {
